@@ -53,7 +53,7 @@ const checkbox = document.getElementById('filter') as HTMLInputElement;
 // Assuming you have loaded a GeoJSON layer and added it to the map
 const geojsonLayer = new google.maps.Data();
 
-geojsonLayer.loadGeoJson("./db1cv.geojson");
+geojsonLayer.loadGeoJson("C:/Users/ellen/Downloads/WRCE at CV water board/js1/js-samples/db1cv.geojson");
 
 geojsonLayer.setMap(map); // Assuming 'map' is your Google Maps instance
 
