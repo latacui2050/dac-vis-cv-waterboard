@@ -25,7 +25,7 @@
 
 console.log(import.meta.env.VITE_GOOGLE_MAPS_API_KEY);
 
-// import {dac} from "./dbdac.js";
+import {db1cv2} from "./db1cv2.js";
 import {cvdac} from "./dbnotfl.js";
 // console.log(dac[0].lat);
 
@@ -55,7 +55,7 @@ const checkbox = document.getElementById('filter') as HTMLInputElement;
 // Assuming you have loaded a GeoJSON layer and added it to the map
 const geojsonLayer = new google.maps.Data();
 
-geojsonLayer.loadGeoJson("db1cv.geojson");
+geojsonLayer.loadGeoJson('db1cv.geojson');
 
 // geojsonLayer.loadGeoJson();
 

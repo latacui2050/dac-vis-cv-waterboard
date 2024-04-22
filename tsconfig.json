@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "resolveJsonModule": true,
+    "baseUrl": "./",
     "esModuleInterop": true,
     "module": "esnext",
     "target": "esnext",
