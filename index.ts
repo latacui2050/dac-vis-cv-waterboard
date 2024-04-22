@@ -167,67 +167,67 @@ let d: number = 0;
 //   position: { lat: a, lng: b },
 //   });
 
-checkbox.addEventListener('change', (event) => {
+// checkbox.addEventListener('change', (event) => {
 
-  // Event handler function to be executed when the checkbox state changes
-  if (checkbox.checked) {
-      // // console.log('Checkbox is checked');
-      // marker.setMap(null);
-      // d = 0;
-      setMapOnAll(markers, null);
-      setMapOnAll(markerscl, map);
-  } else {
-      // // console.log('Checkbox is unchecked');
-      // marker.setMap(map);
-      // d = 20;
-      setMapOnAll(markers, map);
-      setMapOnAll(markerscl, null)
-  }
-  // marker.setMap(null);
+//   // Event handler function to be executed when the checkbox state changes
+//   if (checkbox.checked) {
+//       // // console.log('Checkbox is checked');
+//       // marker.setMap(null);
+//       // d = 0;
+//       setMapOnAll(markers, null);
+//       setMapOnAll(markerscl, map);
+//   } else {
+//       // // console.log('Checkbox is unchecked');
+//       // marker.setMap(map);
+//       // d = 20;
+//       setMapOnAll(markers, map);
+//       setMapOnAll(markerscl, null)
+//   }
+//   // marker.setMap(null);
 
-  // marker.setPosition({lat: a, lng: b+d});
+//   // marker.setPosition({lat: a, lng: b+d});
 
-});
+// });
   
-  const triangleCoords = [
-    { lat: 25.774, lng: -80.19 },
-    { lat: 18.466, lng: -66.118 },
-    { lat: 32.321, lng: -64.757 },
-  ];
+//   const triangleCoords = [
+//     { lat: 25.774, lng: -80.19 },
+//     { lat: 18.466, lng: -66.118 },
+//     { lat: 32.321, lng: -64.757 },
+//   ];
 
-  const bermudaTriangle = new google.maps.Polygon({ paths: triangleCoords });
+//   const bermudaTriangle = new google.maps.Polygon({ paths: triangleCoords });
 
-  google.maps.event.addListener(map, "click", (e) => {
-    console.log(d);
-    const resultColor = google.maps.geometry.poly.containsLocation(
-      e.latLng,
-      bermudaTriangle
-    )
-      ? "blue"
-      : "red";
+//   google.maps.event.addListener(map, "click", (e) => {
+//     console.log(d);
+//     const resultColor = google.maps.geometry.poly.containsLocation(
+//       e.latLng,
+//       bermudaTriangle
+//     )
+//       ? "blue"
+//       : "red";
 
-    const resultPath = google.maps.geometry.poly.containsLocation(
-      e.latLng,
-      bermudaTriangle
-    )
-      ? // A triangle.
-        "m 0 -1 l 1 2 -2 0 z"
-      : google.maps.SymbolPath.CIRCLE;
+//     const resultPath = google.maps.geometry.poly.containsLocation(
+//       e.latLng,
+//       bermudaTriangle
+//     )
+//       ? // A triangle.
+//         "m 0 -1 l 1 2 -2 0 z"
+//       : google.maps.SymbolPath.CIRCLE;
 
-    // new google.maps.Marker({
-    //   position: e.latLng,
-    //   map,
-    //   icon: {
-    //     path: resultPath,
-    //     // fillColor: resultColor,
-    //     fillColor: markColor,
-    //     fillOpacity: 0.2,
-    //     strokeColor: "white",
-    //     strokeWeight: 0.5,
-    //     scale: 10,
-    //   },
-    // });
-  });
+//     // new google.maps.Marker({
+//     //   position: e.latLng,
+//     //   map,
+//     //   icon: {
+//     //     path: resultPath,
+//     //     // fillColor: resultColor,
+//     //     fillColor: markColor,
+//     //     fillOpacity: 0.2,
+//     //     strokeColor: "white",
+//     //     strokeWeight: 0.5,
+//     //     scale: 10,
+//     //   },
+//     // });
+//   });
 }
 
 
