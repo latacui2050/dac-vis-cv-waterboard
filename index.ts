@@ -29,6 +29,8 @@ console.log(import.meta.env.VITE_GOOGLE_MAPS_API_KEY);
 import {cvdac} from "./dbnotfl.js";
 // console.log(dac[0].lat);
 
+// import dac1 from "./config.json" assert { type: "json" };
+
 const map = new google.maps.Map(
   document.getElementById("map") as HTMLElement,
   {
@@ -53,7 +55,9 @@ const checkbox = document.getElementById('filter') as HTMLInputElement;
 // Assuming you have loaded a GeoJSON layer and added it to the map
 const geojsonLayer = new google.maps.Data();
 
-geojsonLayer.loadGeoJson("C:/Users/ellen/Downloads/WRCE at CV water board/js1/js-samples/db1cv.geojson");
+geojsonLayer.loadGeoJson("db1cv.geojson");
+
+// geojsonLayer.loadGeoJson();
 
 geojsonLayer.setMap(map); // Assuming 'map' is your Google Maps instance
 
