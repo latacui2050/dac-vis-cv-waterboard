@@ -8,6 +8,23 @@
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry">
 
+// app.ts
+// require('dotenv').config();
+// import dotenv from 'dotenv';
+
+// dotenv.config();
+
+// import { readFileSync } from 'fs';
+
+// const config = JSON.parse(readFileSync('./config.json'));
+
+// const apiKey = config.apiKey;
+
+// const apiKey = process.env.API_KEY;
+// console.log(apiKey); // Output: your_api_key_here
+
+console.log(import.meta.env.VITE_GOOGLE_MAPS_API_KEY);
+
 import {dac} from "./dbdac.js";
 import {cvdac} from "./dbnotfl.js";
 console.log(dac[0].lat);
